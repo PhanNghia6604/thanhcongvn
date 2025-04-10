@@ -1,0 +1,155 @@
+/* Home.module.css */
+.home {
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn tới ảnh nền */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column; /* Đảm bảo các phần tử xếp theo chiều dọc */
+    overflow: hidden;
+  }
+  
+  .overlay {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.3)); /* Tạo nền mờ để dễ đọc */
+    padding: 40px 50px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeInOverlay 1.5s ease-out;
+    z-index: 1; 
+    margin-bottom: 100px; 
+  }
+  
+  .title {
+    font-size: 60px;  /* Tăng kích thước chữ */
+    font-weight: bold;
+    color: #ffffff;  /* Màu đỏ cam nổi bật */
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;  /* Làm chữ in hoa để trông mạnh mẽ hơn */
+    opacity: 0;
+    animation: fadeInTitle 2s ease-out forwards;
+    animation-delay: 0.5s;
+
+    /* Thêm bóng đổ để tạo chiều sâu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 152, 9, 0.5);
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Thêm hiệu ứng khi hover lên tiêu đề */
+.title:hover {
+    color: #ff9f43;  /* Thay đổi màu khi hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 105, 180, 0.8);  /* Bóng đổ khi hover */
+    transform: scale(1.1);  /* Phóng to tiêu đề khi hover */
+    transition: all 0.3s ease;  /* Thêm hiệu ứng chuyển động mượt mà */
+}
+
+  
+  .description {
+    font-size: 20px;
+    color: #000000;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .callToAction {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .callToAction:hover {
+    background-color: rgb(150, 150, 150);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: transparent; /* Nền mờ cho footer */
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2; /* Đảm bảo footer nằm trên nền ảnh */
+  }
+  
+  .socialIcons {
+    margin-bottom: 10px;
+  }
+  
+  .socialIcons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .socialIcons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .socialIcons a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .contactInfo p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .contactInfo {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Hiệu ứng nền */
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Hiệu ứng hiện tiêu đề */
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

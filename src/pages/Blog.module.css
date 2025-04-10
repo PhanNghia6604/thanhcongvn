@@ -1,0 +1,96 @@
+/* Blog.module.css */
+.blog {
+   
+    padding-top: 80px;  /* Để tránh Navbar che mất */
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Full chiều cao màn hình */
+    width: 100%;
+    background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn tới ảnh nền bạn đã tải lên */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+ 
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dùng grid layout để bài viết được phân bố đều */
+    gap: 20px;
+  }
+  
+  .blog-post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #c9c9c9;
+    transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng khi hover */
+    cursor: pointer; /* Khi hover, chuột sẽ thay đổi để cho thấy là clickable */
+    text-decoration: none; /* Bỏ underline mặc định của thẻ <a> */
+  }
+  
+  .blog-post:hover {
+    transform: translateY(-5px); /* Hiệu ứng di chuyển nhẹ khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng độ shadow khi hover */
+  }
+  
+  .blog-post h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .blog-post .post-date, .blog-post .post-author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .footer {
+    background-color: transparent; /* Nền mờ cho footer */
+    color: rgb(255, 255, 255);
+    padding-top: 60px;
+   
+   
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+   
+  }
+  
+  .socialIcons {
+    margin-bottom: 10px;
+  }
+  
+  .socialIcons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .socialIcons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .socialIcons a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .contactInfo p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .contactInfo {
+    font-size: 16px;
+    margin-top: 10px;
+  }
