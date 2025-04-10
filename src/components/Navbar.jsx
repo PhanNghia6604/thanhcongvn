@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    console.log("Searching for:", searchQuery); // Bạn có thể thêm chức năng tìm kiếm ở đây.
+    console.log("Searching for:", searchQuery); 
   };
 
   useEffect(() => {

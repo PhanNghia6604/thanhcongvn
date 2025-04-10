@@ -83,3 +83,47 @@
     }
   }
   
+  @media screen and (max-width: 768px) {
+    .service {
+      padding-top: 60px;
+      height: auto;
+      background-position: top;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      padding: 0 10px;
+    }
+  
+    .servicesGrid {
+      grid-template-columns: 1fr; /* Hiển thị 1 cột trên điện thoại */
+      gap: 20px;
+      padding: 0 10px;
+    }
+  
+    .serviceCard {
+      border-radius: 10px;
+    }
+  
+    .serviceImage {
+      height: 160px;
+    }
+  
+    .serviceContent {
+      padding: 15px;
+    }
+  
+    .serviceTitle {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .serviceDescription {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  

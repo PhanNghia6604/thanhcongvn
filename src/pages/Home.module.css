@@ -152,4 +152,54 @@
       transform: translateY(0);
     }
   }
+  @media (max-width: 768px) {
+    .home {
+      padding: 20px 15px;
+      height: auto;
+      background-position: top;
+      justify-content: flex-start;
+    }
+  
+    .overlay {
+      padding: 25px 20px;
+      margin-bottom: 50px;
+      border-radius: 10px;
+    }
+  
+    .title {
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+  
+    .description {
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 100%;
+      margin-top: 15px;
+    }
+  
+    .callToAction {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+  
+    .footer {
+      padding: 15px 0;
+      font-size: 14px;
+      position: static; /* Cho footer nằm dưới nội dung thay vì đè sát dưới */
+    }
+  
+    .socialIcons img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .contactInfo p,
+    .contactInfo {
+      font-size: 14px;
+    }
+  }
+  
   
