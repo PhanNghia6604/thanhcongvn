@@ -1,147 +1,120 @@
 /* Blog.module.css */
 .blog {
-   
-    padding-top: 40px;  /* Để tránh Navbar che mất */
-    font-family: Arial, sans-serif;
-    height: 100vh; /* Full chiều cao màn hình */
-    width: 100%;
-    background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn tới ảnh nền bạn đã tải lên */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  padding-top: 80px; /* Thêm padding-top để tránh Navbar che mất */
+  background-color: #f9f9f9; /* Màu nền sáng cho blog */
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn đến ảnh nền */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+s
+.title {
+  text-align: center;
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout linh hoạt */
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.blog-post {
+  background-color: #ffffff; /* Nền trắng cho từng bài viết */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none; /* Bỏ gạch chân khi click vào bài viết */
+}
+
+.blog-post:hover {
+  transform: translateY(-5px); /* Hiệu ứng nâng lên khi hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh khi hover */
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Giúp ảnh không bị méo */
+  border-bottom: 2px solid #ddd;
+}
+
+.blog-post .post-content {
+  padding: 15px;
+}
+
+.blog-post h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.blog-post .post-date,
+.blog-post .post-author {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.blog-post .post-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.blog-post a {
+  text-decoration: none; /* Bỏ gạch chân của liên kết */
+  color: inherit; /* Màu sắc thừa hưởng từ văn bản */
+}
+
+/* Media Queries cho các thiết bị nhỏ */
+@media screen and (max-width: 768px) {
+  .title {
+      font-size: 28px;
   }
- 
+
   .blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dùng grid layout để bài viết được phân bố đều */
-    gap: 20px;
-  }
-  
-  .blog-post {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #c9c9c9;
-    transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng khi hover */
-    cursor: pointer; /* Khi hover, chuột sẽ thay đổi để cho thấy là clickable */
-    text-decoration: none; /* Bỏ underline mặc định của thẻ <a> */
-  }
-  
-  .blog-post:hover {
-    transform: translateY(-5px); /* Hiệu ứng di chuyển nhẹ khi hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng độ shadow khi hover */
-  }
-  
-  .blog-post h2 {
-    font-size: 1.5rem;
-    color: #2c3e50;
-  }
-  
-  .blog-post .post-date, .blog-post .post-author {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-  }
-  
-  .blog-post img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  .footer {
-    background-color: transparent; /* Nền mờ cho footer */
-    color: rgb(255, 255, 255);
-    padding-top: 60px;
-   
-   
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-   
-  }
-  
-  .socialIcons {
-    margin-bottom: 10px;
-  }
-  
-  .socialIcons a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-  
-  .socialIcons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-  }
-  
-  .socialIcons a:hover img {
-    transform: scale(1.1);
-  }
-  
-  .contactInfo p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .contactInfo {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  @media (max-width: 768px) {
-    .blog {
-      padding: 60px 15px 30px;
-      flex-direction: column;
-      align-items: flex-start;
-      background-position: top;
-      height: auto; /* Cho phép nội dung dài hơn kéo trang xuống */
-    }
-  
-    .blog-posts {
-      grid-template-columns: 1fr; /* Hiển thị mỗi hàng 1 bài viết cho dễ đọc */
+      grid-template-columns: 1fr; /* Chuyển sang 1 cột khi màn hình nhỏ */
       gap: 15px;
-      width: 100%;
-    }
-  
-    .blog-post {
-      margin: 0 auto;
-      width: 100%;
-      padding: 12px;
-    }
-  
-    .blog-post h2 {
-      font-size: 1.3rem;
-    }
-  
-    .blog-post .post-date,
-    .blog-post .post-author {
-      font-size: 0.85rem;
-    }
-  
-    .footer {
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-  
-    .socialIcons img {
-      width: 32px;
-      height: 32px;
-    }
-  
-    .contactInfo p,
-    .contactInfo {
-      font-size: 14px;
-      text-align: center;
-    }
-  
-    .socialIcons a {
-      margin: 0 8px;
-    }
   }
-  
+
+  .blog-post {
+      border-radius: 8px;
+  }
+
+  .blog-post img {
+      height: 160px;
+  }
+
+  .blog-post .post-content {
+      padding: 12px;
+  }
+
+  .blog-post h2 {
+      font-size: 1.4rem;
+  }
+
+  .blog-post .post-description {
+      font-size: 0.9rem;
+  }
+
+  .blog-post .post-date,
+  .blog-post .post-author {
+      font-size: 0.8rem;
+  }
+}
