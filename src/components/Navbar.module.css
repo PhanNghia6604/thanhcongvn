@@ -1,13 +1,13 @@
 /* Navbar.module.css */
 .navbar {
-  position: fixed;  /* Giữ navbar cố định ở trên cùng khi cuộn */
+  position: fixed; /* Giữ navbar cố định ở trên cùng khi cuộn */
   top: 0;
   left: 0;
   right: 0;
   background-color: transparent; /* Màu nền trong suốt ban đầu */
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;  /* Đẩy logo sang bên trái và menu sang bên phải */
+  justify-content: space-between; /* Đẩy logo sang bên trái và menu sang bên phải */
   align-items: center;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng cho nền và shadow */
   z-index: 1000;
@@ -57,8 +57,8 @@
   list-style: none;
   gap: 20px;
   transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho menu */
-  flex-grow: 1;  /* Menu sẽ chiếm phần còn lại của không gian */
-  justify-content: flex-end;  /* Đẩy menu sang bên phải */
+  flex-grow: 1; /* Menu sẽ chiếm phần còn lại của không gian */
+  justify-content: flex-end; /* Đẩy menu sang bên phải */
 }
 
 .navItem {
@@ -100,8 +100,8 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
-    flex-direction: row;  /* Căn chỉnh các phần tử trong navbar theo chiều ngang */
-    justify-content: space-between;  /* Đẩy logo sang trái và hamburger menu sang phải */
+    flex-direction: row; /* Căn chỉnh các phần tử trong navbar theo chiều ngang */
+    justify-content: space-between; /* Đẩy logo sang trái và hamburger menu sang phải */
     align-items: center;
   }
 
@@ -122,11 +122,11 @@
     flex-direction: column;
     background-color: #cdcdcd;
     position: absolute;
-    top: 100%;
-    right: 0;  /* Đặt menu vào bên phải */
+    top: 100%; /* Đặt menu bên dưới navbar */
+    right: 0; /* Đặt menu vào bên phải */
     padding: 20px;
     gap: 10px;
-    width: 100vw;  /* Chiều rộng bằng chiều rộng màn hình */
+    width: 100vw; /* Chiều rộng bằng chiều rộng màn hình */
     transform: translateY(-100%); /* Ẩn menu */
     opacity: 0;
     pointer-events: none;
@@ -134,7 +134,7 @@
   }
 
   .navMenu.active {
-    transform: translateY(0);
+    transform: translateY(0); /* Hiển thị menu khi active */
     opacity: 1;
     pointer-events: auto; /* Cho phép click khi menu active */
   }
