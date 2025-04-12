@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './Home.module.css'; // Import CSS module
 import Typewriter from 'typewriter-effect';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/contact'); 
+  };
   return (
     <div className={styles.home}>
       <div className={styles.overlay}>
@@ -23,7 +28,7 @@ function Home() {
         </p>
 
         {/* Nút gọi hành động */}
-        <button className={styles.callToAction}>Liên hệ ngay để bắt đầu công trình lý tưởng của bạn!</button>
+        <button className={styles.callToAction} onClick={handleClick} >Kết nối với chúng tôi !</button>
       </div>
       {/* Footer */}
       <footer className={styles.footer}>
