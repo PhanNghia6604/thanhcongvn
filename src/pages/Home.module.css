@@ -52,8 +52,8 @@
 
 /* Thêm hiệu ứng khi hover lên tiêu đề */
 .title:hover {
-    color: #ff9f43;  /* Thay đổi màu khi hover */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 105, 180, 0.8);  /* Bóng đổ khi hover */
+    color: #ffa229;  /* Thay đổi màu khi hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 0, 0, 0.8);  /* Bóng đổ khi hover */
     transform: scale(1.1);  /* Phóng to tiêu đề khi hover */
     transition: all 0.3s ease;  /* Thêm hiệu ứng chuyển động mượt mà */
 }
