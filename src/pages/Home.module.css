@@ -154,7 +154,7 @@
   }
   @media (max-width: 768px) {
     .home {
-      padding: 20px 15px;
+      padding: 80px 15px;
       height: auto;
       background-position: top;
       justify-content: flex-start;

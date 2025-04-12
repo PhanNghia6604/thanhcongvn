@@ -1,151 +1,146 @@
 /* Navbar.module.css */
 .navbar {
-    position: fixed;  /* Giữ navbar cố định ở trên cùng khi cuộn */
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: zrgb(99, 99, 99); /* Màu nền trong suốt ban đầu */
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
+  position: fixed;  /* Giữ navbar cố định ở trên cùng khi cuộn */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent; /* Màu nền trong suốt ban đầu */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;  /* Đẩy logo sang bên trái và menu sang bên phải */
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng cho nền và shadow */
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  color: #000000;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo:hover {
+  color: #f39c12; /* Màu logo khi hover */
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+
+.hamburgerLine {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hamburger:hover .hamburgerLine {
+  background-color: #f39c12; /* Thay đổi màu khi hover lên hamburger */
+}
+
+/* Menu */
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho menu */
+  flex-grow: 1;  /* Menu sẽ chiếm phần còn lại của không gian */
+  justify-content: flex-end;  /* Đẩy menu sang bên phải */
+}
+
+.navItem {
+  font-size: 18px;
+}
+
+.navLink {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.navLink:hover {
+  color: #f39c12; /* Màu khi hover */
+  padding-left: 20px; /* Đẩy sang trái khi hover */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f39c12;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1); /* Hiệu ứng underline khi hover */
+}
+
+/* Mobile: Ẩn menu và hiển thị hamburger */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: row;  /* Căn chỉnh các phần tử trong navbar theo chiều ngang */
+    justify-content: space-between;  /* Đẩy logo sang trái và hamburger menu sang phải */
     align-items: center;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng cho nền và shadow */
-    z-index: 1000;
   }
-  
-  /* Navbar khi cuộn trang */
-  .navbar.scrolled {
-    background-color: #333;  /* Màu nền khi cuộn */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi navbar ở trạng thái cuộn */
-  }
-  
-  /* Logo */
+
   .logo {
-    color: #000000;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    font-size: 20px; /* Điều chỉnh kích thước logo */
   }
-  
-  .logo:hover {
-    color: #f39c12; /* Màu logo khi hover */
-  }
-  
-  /* Hamburger menu */
-  .hamburger {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-  }
-  
-  .hamburgerLine {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .hamburger:hover .hamburgerLine {
-    background-color: #f39c12; /* Thay đổi màu khi hover lên hamburger */
-  }
-  
-  /* Menu */
-  .navMenu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho menu */
-  }
-  
+
   .navItem {
-    font-size: 18px;
+    font-size: 16px; /* Điều chỉnh kích thước item */
   }
-  
+
   .navLink {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding: 10px 15px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    transition: color 0.3s ease, padding-left 0.3s ease;
+    padding: 8px 12px;
+    text-align: left;
   }
-  
-  .navLink:hover {
-    color: #f39c12; /* Màu khi hover */
-    padding-left: 20px; /* Đẩy sang trái khi hover */
-  }
-  
-  .navLink::after {
-    content: "";
+
+  .navMenu {
+    flex-direction: column;
+    background-color: #cdcdcd;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #f39c12;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    top: 100%;
+    right: 0;  /* Đặt menu vào bên phải */
+    padding: 20px;
+    gap: 10px;
+    width: 100vw;  /* Chiều rộng bằng chiều rộng màn hình */
+    transform: translateY(-100%); /* Ẩn menu */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  
-  .navLink:hover::after {
-    transform: scaleX(1); /* Hiệu ứng underline khi hover */
+
+  .navMenu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Cho phép click khi menu active */
   }
-  
-  /* Mobile: Ẩn menu và hiển thị hamburger */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 10px 20px;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .logo {
-      font-size: 20px;
-    }
-  
-    .navItem {
-      font-size: 16px;
-    }
-  
-    .navLink {
-      padding: 8px 12px;
-      text-align: left;
-    }
-  
-    .navMenu {
-      flex-direction: column;
-      width: 100vw;
-      background-color: #333;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      padding: 20px;
-      gap: 10px;
-  
-      /* Hiệu ứng trượt xuống */
-      transform: translateY(-100%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-  
-    .navMenu.active {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
+
+  /* Hiển thị hamburger trên mobile */
+  .hamburger {
+    display: flex;
   }
+}

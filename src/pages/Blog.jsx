@@ -49,13 +49,24 @@ function Blog() {
         image: "https://png.pngtree.com/background/20230519/original/pngtree-worker-working-on-wood-at-construction-site-picture-image_2653850.jpg",
         link: "/post/5"
       },
+      {
+        id: 5,
+        title: "Thiết kế kiến trúc xanh trong xây dựng",
+        content: "Kiến trúc xanh giúp tiết kiệm năng lượng và bảo vệ môi trường. Việc áp dụng các vật liệu và công nghệ mới giúp các công trình trở nên thân thiện với thiên nhiên, giảm thiểu tác động tiêu cực lên môi trường...",
+        author: "Thành Công VN",
+        date: "2025-04-06",
+        image: "https://png.pngtree.com/background/20230519/original/pngtree-worker-working-on-wood-at-construction-site-picture-image_2653850.jpg",
+        link: "/post/5"
+      },
       
   ];
 
   return (
     <div className={styles.blog}>
+       
       
       <div className={styles['blog-posts']}>
+   
         {posts.map(post => (
           <Link key={post.id} to={post.link} className={styles['blog-post']}>
             <h2>{post.title}</h2>

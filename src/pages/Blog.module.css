@@ -1,7 +1,7 @@
 /* Blog.module.css */
 .blog {
    
-    padding-top: 80px;  /* Để tránh Navbar che mất */
+    padding-top: 40px;  /* Để tránh Navbar che mất */
     font-family: Arial, sans-serif;
     height: 100vh; /* Full chiều cao màn hình */
     width: 100%;
