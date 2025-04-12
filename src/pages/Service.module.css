@@ -1,129 +1,131 @@
 /* Service.module.css */
 .service {
-    padding-top: 40px;
-    background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
-    min-height: 100vh;
-    height: 100vh;
-    width: 100%;
-    background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn tới ảnh nền */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column; /* Đảm bảo các phần tử xếp theo chiều dọc */
-    overflow: hidden;
-  }
-  
+  padding-top: 0;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn tới ảnh nền */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column; /* Đảm bảo các phần tử xếp theo chiều dọc */
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.servicesGrid {
+  display: flex; /* Sử dụng flexbox thay vì grid */
+  justify-content: center; /* Căn giữa các card */
+  gap: 30px; /* Khoảng cách giữa các card */
+  padding: 120px 20px;
+  flex-wrap: wrap; /* Cho phép các item tự động xuống dòng nếu cần thiết */
+  max-width: 1600px; /* Giới hạn chiều rộng của grid */
+}
+
+.serviceCard {
+  background-color: #c9c9c9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 300px; /* Đặt chiều rộng cố định cho các card */
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px); /* Hiệu ứng di chuyển nhẹ khi hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+
+.serviceImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Giúp ảnh không bị méo */
+}
+
+.serviceContent {
+  padding: 20px;
+}
+
+.serviceTitle {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.serviceDescription {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
   .title {
-    text-align: center;
-    font-size: 36px;
-    color: #000000;
-    margin-bottom: 40px;
-    
-  }
-  
-  .servicesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Đảm bảo bố cục linh hoạt */
-    gap: 30px;
-    padding: 0 20px;
-  }
-  
-  .serviceCard {
-    background-color: #c9c9c9;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .serviceCard:hover {
-    transform: translateY(-5px); /* Hiệu ứng di chuyển nhẹ khi hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
-  }
-  
-  .serviceImage {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Giúp ảnh không bị méo */
-  }
-  
-  .serviceContent {
-    padding: 20px;
-  }
-  
-  .serviceTitle {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .serviceDescription {
-    font-size: 16px;
-    color: #7f8c8d;
-    line-height: 1.6;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .title {
       font-size: 28px;
-    }
-  
-    .serviceTitle {
-      font-size: 20px;
-    }
-  
-    .serviceDescription {
-      font-size: 14px;
-    }
   }
-  
-  @media screen and (max-width: 768px) {
-    .service {
+
+  .serviceTitle {
+      font-size: 20px;
+  }
+
+  .serviceDescription {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service {
       padding-top: 60px;
       height: auto;
       background-position: top;
       padding-left: 10px;
       padding-right: 10px;
-    }
-  
-    .title {
+  }
+
+  .title {
       font-size: 28px;
       margin-bottom: 30px;
       padding: 0 10px;
-    }
-  
-    .servicesGrid {
-      grid-template-columns: 1fr; /* Hiển thị 1 cột trên điện thoại */
+  }
+
+  .servicesGrid {
+      flex-direction: column; /* Chuyển đổi các card thành cột trên di động */
       gap: 20px;
       padding: 0 10px;
-    }
-  
-    .serviceCard {
+  }
+
+  .serviceCard {
       border-radius: 10px;
-    }
-  
-    .serviceImage {
+      width: 100%; /* Card chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+  }
+
+  .serviceImage {
       height: 160px;
-    }
-  
-    .serviceContent {
+  }
+
+  .serviceContent {
       padding: 15px;
-    }
-  
-    .serviceTitle {
+  }
+
+  .serviceTitle {
       font-size: 20px;
       margin-bottom: 10px;
-    }
-  
-    .serviceDescription {
+  }
+
+  .serviceDescription {
       font-size: 14px;
       line-height: 1.5;
-    }
   }
-  
+}

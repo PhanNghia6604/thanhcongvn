@@ -1,121 +1,117 @@
 /* Blog.module.css */
 .blog {
-  padding-top: 80px; /* Thêm padding-top để tránh Navbar che mất */
-  background-color: #f9f9f9; /* Màu nền sáng cho blog */
+  padding-top: 0px;
+  background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
   width: 100%;
-  background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png'); /* Đường dẫn đến ảnh nền */
+  background-image: url('https://en.idei.club/uploads/posts/2023-06/1687356340_en-idei-club-p-construction-background-dizain-krasivo-46.png');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   flex-direction: column;
   overflow: hidden;
 }
-s
-.title {
+
+.titleBlog {
   text-align: center;
   font-size: 36px;
   color: #000;
   margin-bottom: 40px;
-  text-transform: uppercase;
 }
 
-.blog-posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout linh hoạt */
-  gap: 20px;
-  padding: 0 20px;
-  width: 100%;
-  align-items: center;
+.blogPosts {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 1600px;
 }
 
-.blog-post {
-  background-color: #ffffff; /* Nền trắng cho từng bài viết */
-  border-radius: 10px;
+.blogPost {
+  background-color: #fff;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
   cursor: pointer;
-  text-decoration: none; /* Bỏ gạch chân khi click vào bài viết */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blog-post:hover {
-  transform: translateY(-5px); /* Hiệu ứng nâng lên khi hover */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh khi hover */
+.blogPost:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.blog-post img {
+.blogPostImage {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Giúp ảnh không bị méo */
-  border-bottom: 2px solid #ddd;
+  object-fit: cover;
 }
 
-.blog-post .post-content {
-  padding: 15px;
-}
-
-.blog-post h2 {
-  font-size: 1.6rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-
-.blog-post .post-date,
-.blog-post .post-author {
-  font-size: 0.9rem;
-  color: #7f8c8d;
-}
-
-.blog-post .post-description {
-  font-size: 1rem;
+.blogPostTitle {
+  font-size: 24px;
   color: #333;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.blogPostDescription {
+  font-size: 16px;
+  color: #7f8c8d;
   line-height: 1.6;
+  margin: 15px;
 }
 
-.blog-post a {
-  text-decoration: none; /* Bỏ gạch chân của liên kết */
-  color: inherit; /* Màu sắc thừa hưởng từ văn bản */
+.readMore {
+  display: block;
+  margin: 15px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
 }
 
-/* Media Queries cho các thiết bị nhỏ */
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  .title {
-      font-size: 28px;
+  .blog {
+    padding-top: 40px;
   }
 
-  .blog-posts {
-      grid-template-columns: 1fr; /* Chuyển sang 1 cột khi màn hình nhỏ */
-      gap: 15px;
+  .titleBlog {
+    font-size: 28px;
   }
 
-  .blog-post {
-      border-radius: 8px;
+  .blogPosts {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
   }
 
-  .blog-post img {
-      height: 160px;
+  .blogPost {
+    width: 100%;
   }
 
-  .blog-post .post-content {
-      padding: 12px;
+  .blogPostImage {
+    height: 160px;
   }
 
-  .blog-post h2 {
-      font-size: 1.4rem;
+  .blogPostTitle {
+    font-size: 20px;
   }
 
-  .blog-post .post-description {
-      font-size: 0.9rem;
+  .blogPostDescription {
+    font-size: 14px;
   }
 
-  .blog-post .post-date,
-  .blog-post .post-author {
-      font-size: 0.8rem;
+  .readMore {
+    font-size: 14px;
   }
 }
